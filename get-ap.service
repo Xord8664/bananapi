@@ -1,0 +1,15 @@
+[Unit]
+Description=Enabling ap mode on wi-fi card and starting hostapd daemon
+Wants=multi-user.target
+After=dnsmasq.service bpi-init.service
+Conflicts=shutdown.target hostapd.service
+
+[Service]
+Type=simple
+#PIDFile=/tmp/get-ap.pid
+ExecStart=/usr/bin/get-apmode.sh start
+ExecStop=/usr/bin/get-apmode.sh stop
+TimeoutStopSec=15 30
+
+[Install]
+WantedBy=multi-user.target

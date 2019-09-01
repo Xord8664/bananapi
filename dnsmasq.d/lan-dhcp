@@ -1,0 +1,17 @@
+#interface=lan0
+#interface=lan1
+#interface=lan2
+#interface=lan3
+
+interface=br0
+#no-dhcp-interface=eth0
+no-dhcp-interface=eth1
+
+local=/exa/
+domain=exa
+
+dhcp-option=3,192.168.10.1
+dhcp-range=192.168.10.10,192.168.10.250,12h
+
+dhcp-host=38:60:77:cd:fb:16,192.168.10.200
+dhcp-host=30:9c:23:e4:68:a8,192.168.10.209

@@ -1,0 +1,2 @@
+enable-tftp
+dhcp-boot=boot/grub/x86_64-efi/core.efi,boothost,192.168.10.200
